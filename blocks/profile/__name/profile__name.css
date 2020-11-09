@@ -1,6 +1,6 @@
 .profile__name {
-  text-overflow: ellipsis; 
-  white-space: nowrap; 
+  text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
   margin: 0;
   font-weight: 500;
