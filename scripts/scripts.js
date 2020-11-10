@@ -15,18 +15,19 @@ buttonSavePopup.addEventListener("click", popupToggle)
 
 let profileInfoName = profileInfo.querySelector(".profile__name");
 let profileInfoProfession = profileInfo.querySelector(".profile__profession")
-let formElementOne = popup.querySelector(".input__text-name");
-let formElementTwo = popup.querySelector(".input__text-about");
+let formElementOne = popup.querySelector(".popup__text_name");
+let formElementTwo = popup.querySelector(".popup__text_bio");
 
 function formSubmitName (evt) {
   evt.preventDefault(); 
   let popupContainer = document.querySelector(".popup__container");
-  let name = popupContainer.querySelector(".input__text-name");
-  let profession = popupContainer.querySelector(".input__text-about"); 
+  let name = popupContainer.querySelector(".popup__text_name");
+  let profession = popupContainer.querySelector(".popup__text_bio"); 
   let nameHolder = profileInfo.querySelector('.profile__name');
   nameHolder.textContent = name.value;
   let professionProfile = profileInfo.querySelector('.profile__profession');
-    professionProfile.textContent = profession.value; 
+  professionProfile.textContent = profession.value;
+  popupToggle();
 }
 
-buttonSavePopup.addEventListener('click', formSubmitName); 
+buttonSavePopup.addEventListener('click', formSubmitName);

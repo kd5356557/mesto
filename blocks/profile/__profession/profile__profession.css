@@ -1,6 +1,7 @@
 .profile__profession {
   text-overflow: ellipsis;
   white-space: nowrap;
+  overflow: hidden;
   grid-column: 1/2;
   grid-row: 2/3;
   font-size: 18px;
@@ -14,6 +15,5 @@
     font-size: 14px;
     line-height: 16.94px;
     margin: auto;
-    margin-bottom: 36px;
   }  
 }

@@ -2,11 +2,16 @@
   font-size: 14px;
   line-height: 16.94px;
   width: 100%;
-  margin-top: 75px;
+  margin-top: 30px;
   border: 0;
   border-bottom: 1px solid rgba(0, 0, 0, .2);
   box-sizing: border-box;
 }
+
 .popup__text::placeholder{
   color: #000000;
+}
+
+.popup__text:nth-child(2){
+  margin-top: 29.74px;
 }
