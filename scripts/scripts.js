@@ -11,25 +11,21 @@
   
   let showPopup = () => {  
     popup.classList.add('popup_opened');
+    formElementOne.value = profileInfoName.textContent;
+    formElementTwo.value = profileInfoProfession.textContent;
   }
+
   let hidePopup = () => {  
     popup.classList.remove('popup_opened');
   }
 
-  let formElement = document.querySelector(".popup__container");
-  let name = popupContainer.querySelector(".popup__text_name"); 
-  let profession = popupContainer.querySelector(".popup__text_bio"); 
-  let nameHolder = profileInfo.querySelector('.profile__name');
-  let professionProfile = profileInfo.querySelector('.profile__profession');
-
 function formSubmitHandler (evt) {
   evt.preventDefault();
-  nameHolder.textContent = name.value;
-  professionProfile.textContent = profession.value;
-  showPopup();
+  profileInfoName.textContent = formElementOne.value;
+  profileInfoProfession.textContent = formElementTwo.value;
   hidePopup();
 }
 
   buttonOpenPopup.addEventListener("click", showPopup);
   buttonClosePopup.addEventListener("click", hidePopup);
-  formElement.addEventListener('submit', formSubmitHandler);
+  popupContainer.addEventListener('submit', formSubmitHandler);
